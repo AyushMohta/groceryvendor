@@ -98,6 +98,19 @@ class _AddNewProductState extends State<AddNewProduct> {
                                       tax: tax,
                                       weight: weight,
                                       productName: productName);
+
+                                  setState(() {
+                                    _formKey.currentState.reset();
+                                    _comparePriceTextController.clear();
+                                    dropdownValue = null;
+                                    _subcategoryTextController.clear();
+                                    _categoryTextController.clear();
+                                    _brandTextController.clear();
+                                    _track = false;
+                                    _image = null;
+                                    _visible = false;
+                                  });
+
                                 } else {
                                   _provider.alertDialog(
                                       context: context,
