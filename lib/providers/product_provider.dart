@@ -65,7 +65,7 @@ class ProductProvider with ChangeNotifier{
   }
 
   alertDialog({context, title, content}) {
-    showCupertinoDialog(context: context, builder: (BuildContext conext){
+    showCupertinoDialog(context: context, builder: (BuildContext context){
       return CupertinoAlertDialog(
         title: Text(title),
         content: Text(content),
@@ -113,7 +113,7 @@ class ProductProvider with ChangeNotifier{
         'stockQty': stockQty,
         'lowStockQty': lowStockQty,
         'published': false,
-        'productId': timeStamp,
+        'productId': timeStamp.toString(),
         'productImage': this.productUrl
       });
       this.alertDialog(

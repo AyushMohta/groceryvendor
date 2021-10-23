@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_vendor_app/screens/add_newproduct_screen.dart';
+import 'package:grocery_vendor_app/widgets/published_products.dart';
+import 'package:grocery_vendor_app/widgets/unpublished_products.dart';
 
 class ProductScreen extends StatelessWidget {
   @override
@@ -76,8 +78,8 @@ class ProductScreen extends StatelessWidget {
             Expanded(
               child: TabBarView(
                 children: [
-                  Center(child: Text('Published')),
-                  Center(child: Text('Un Published')),
+                  PublishedProducts(),
+                  UnPublishedProduct(),
                 ],
               ),
             )
